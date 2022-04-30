@@ -1,0 +1,19 @@
+.container{
+    display: block;
+    border: 1px solid red;
+    width: 70%;
+   font-weight: 5px;
+    margin: auto;
+    
+    background-color: rgb(233, 208, 175);
+    display: flex;
+    font-size: small;
+    flex-flow: column;
+}
+
+.text{
+    
+    color: rgb(39, 34, 24);
+   
+}
+

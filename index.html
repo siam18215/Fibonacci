@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Exam</title><script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script>
+		$(document).ready(function() {
+			$("#btn").click(function() {
+				var first_number = 0;
+				var second_number = 1;
+
+				var size = $("#number").val();
+				result = $("#result");
+				var output = '0,1';
+
+				for (i = 0; i < size - 2; i++) {
+					var next_number = first_number + second_number;
+					output = (output + (",") + next_number);
+					first_number = second_number;
+					second_number = next_number;
+				}
+				$("#result").html(output);
+			});
+		});
+	</script>
+</head>
+<body>
+    <div class="container">
+       
+    Enter the number of items in fibonacci series:
+	<input type="text" name="value" id="number"></input>
+	<button id="btn"> Submit </button><br>
+	<h4>Output: <br> <span id="result"></span></h4>
+
+      
+    </div>
+ 
+</body>
+</html>
